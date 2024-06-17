@@ -1,0 +1,247 @@
+* {
+    box-sizing: border-box;               
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: white;
+    font-family: Arial, sans-serif;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/*three images*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    width: 80vw;
+    max-width: 1200px;
+    height: auto;
+    margin-top: 50px;
+}
+
+.item {
+    width: 100%;
+    height: 100%;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+.item2 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.item3 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+/* flexbox styling */
+.flexboxSection {
+    width: 100%; 
+    margin-top: 50px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    
+    
+}
+
+.fig {
+    text-align: center;
+    margin: 10px;
+    align-items: center;
+}
+
+.fig img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.fig h3 {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #4603c3;
+}
+
+.fig button {
+    background-color: #861bf1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 0.875rem;
+}
+
+.fig button:hover {
+    background-color: #4603c3;
+}
+
+
+/* carousel */
+.carousel {
+    margin-top: 50px;
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+.carousel h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #4603c3;
+}
+
+.glide__slide {
+    padding: 1rem;
+    background: white;
+    border: 1px solid #f8f8f8; 
+    margin: 0 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.glide__slide img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+.glide__slide p {
+    margin: 0.5rem 0;
+}
+
+.glide__slide #price {
+    color: #4603c3;
+    font-weight: bold;
+}
+
+.glide__arrow {
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+}
+
+
+/*mobile adoption*/
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        width: 100%;
+    }
+
+    .item1, .item2, .item3 {
+        grid-column: 1 / 2;
+        grid-row: auto
+    }
+
+}
+
+
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fig {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-top: 1px solid #e2d5f9;
+        padding: 15px 0;
+        width:100%;
+    }
+
+    .fig img {
+        margin:20px;
+        float:right;
+
+    }
+
+    .fig h3{
+        
+            font-size: 1rem;
+            
+            color: #4603c3;
+            float:right;
+            position:absolute;
+            margin-left:200px;
+
+        }
+    
+
+    .fig button {
+        margin-bottom: 20px;
+        align-self: flex-end;
+    
+
+    }
+}
+
+@media (max-width: 768px) {
+    .glide__arrow {
+        font-size: 1rem;
+        display:block;
+        
+    }
+
+    .carousel h2{
+        text-align:center;
+        width: 100%;
+
+    }
+
+    .glide__slides{
+        width:50%;
+    }
+
+
+    .carousel {
+        padding: 10px; 
+        margin: 0 auto; 
+        max-width: 90%; 
+    }
+
+}
+
+
+
+
